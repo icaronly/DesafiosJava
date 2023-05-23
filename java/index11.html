@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salarial</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .situacao {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reajuste Salarial</h1>
+
+    <button onclick="clicou()">Reajustar Salario</button>
+
+    <section class="situacao" id="situacao">
+        <h2>Clique no botão acima para iniciar</h2>
+    </section>
+
+    <script>
+        function clicou() {
+            let nome = prompt('Qual o nome do funcionario?')
+            let sal = Number(prompt(`Qual o salario de ${nome}?`))
+            let r = Number(prompt(`O salario de ${nome} será reajustado em quantos porcentos?`))
+
+            situacao.innerHTML = (`<b>${nome} recebeu um aumento salarial!</b>`)
+            situacao.innerHTML = (`<h3>${nome} recebeu um aumento salarial! </h3> <br>\
+                                    O salario era R$ ${sal} <br>\
+                                    Com um aumento de ${r}%, o salario vai aumentar em R$ ${sal.toFixed(2) * (r / 100)} <br>\
+                                    A partir do mês que vem, ${nome} receberá R$ ${(sal * (1 + r / 100)).toFixed(2)}`)
+}
+    </script>    
+</body>
+
+</html>

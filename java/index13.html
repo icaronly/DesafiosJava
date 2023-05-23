@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o Troco</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando o Troco</h1>
+
+    <button onclick="clicou()">Comprar Produto</button>
+    
+ <script>
+    function clicou() {
+    let nome = prompt('Qual o nome do produto que você deseja?')
+    let n1 = Number(prompt(`Qual o valor do ${nome}`))
+    let n2 = Number(prompt(`Quanto dinheiro você deseja gastar para pagar pelo ${nome}?`))
+
+    let troco = n2 - n1
+
+    window.alert(`Você comprou ${nome} que custou R$ ${n1}\n
+    Deu R$ ${n2} e vai receber R$ ${troco} de troco.`)
+    }
+ </script>
+  
+</body>
+</html>

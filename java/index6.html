@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> U$$</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+
+        button {
+            display: flex;
+            font-size: 12pt;
+            padding: 20px;
+            margin-left: 46%;
+            margin-bottom: 2%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .situacao {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+            let dolar = window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+    </script>
+    <h1>Conversor R$ -> U$$</h1>
+    <button onclick="clicou()">Converter</button>
+    <section class="situacao" id="situacao">
+        <p>Clique no botão acima para iniciar.</p>
+    </section>
+
+    <script>
+        function clicou() {
+            let real = Number(window.prompt('Quantos R$ você tem na carteira?'))
+            let valor = (real / dolar)
+
+            situacao.innerHTML = (`Você tem U$$ ${valor} dólares.`)  
+        }
+    </script>
+</body>
+
+</html>
